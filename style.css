@@ -1,0 +1,108 @@
+body{
+	margin: 0;
+}
+
+.not-connected{
+	display:none;
+}
+
+.badge-img img{
+	max-height: 80px;
+}
+
+.banniere-img{
+	max-height: 150px;
+}
+
+.banniere{
+	margin: 0 !important;
+}
+
+.banniere-img img{
+	width:100%;
+	max-height: inherit;
+	object-fit: cover;
+}
+
+section{
+	margin: 9%;
+}
+
+.actu-livre .lien-modal-apercu-livre img{
+	max-height: 100px;
+}
+
+#section-actus-badges, #section-bibliotheque, .fil-actus, .bloc-actus-recentes,.badges-utilisateur, .actu-ligne , .bloc-badges, .badge-ligne, .bloc-bibliotheque{
+	display: flex;
+}
+
+.bloc-actus-recentes, .fil-actus, .bloc-badges, .badges-utilisateur, #section-bibliotheque{
+	flex-direction: column;
+}
+
+#section-actus-badges, #section-bibliotheque{
+	justify-content: space-around;
+	width: 80%;
+	
+
+}
+
+.bloc-bibliotheque{
+	justify-content: center;
+
+}
+.badge-ligne{
+	max-width: 100%;
+	align-items: center;
+
+}
+
+.fil-actus{
+max-width: 50%;
+}
+
+.badges-utilisateur{
+	min-width: 15%;
+	max-width: 20%;
+}
+
+.actu-ligne{
+	align-items: center;
+	justify-content: space-between;
+	max-width: 100%;
+}
+
+.profil-img, .badge-img{
+	margin-right: 30px;
+}
+.actu-livre{
+	margin-left: 30px;
+}
+
+
+.profil-img img{
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+}
+
+.actu-content{
+	float: left;
+}
+
+.livre-img img{
+	max-width: 100%;
+}
+
+.livre-ligne{
+	max-width: 19%;
+	margin-inline: 2%;
+}
+
+.biblio-content .description{
+	max-height: 150px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+    white-space: nowrap;
+	line-height: 4px;
+}
