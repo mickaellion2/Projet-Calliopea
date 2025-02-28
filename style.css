@@ -1,5 +1,22 @@
 body{
 	margin: 0;
+
+}
+main{
+	display: grid;
+     grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 20px;
+}
+h1{
+	
+}
+
+h2{
+	font-size: 32px;
+}
+
+h3{
+	font-size: 24px;
 }
 
 .not-connected{
@@ -11,11 +28,12 @@ body{
 }
 
 .banniere-img{
-	max-height: 150px;
+	max-height: 200px;
 }
 
 .banniere{
 	margin: 0 !important;
+	grid-column: 1 / 13;
 }
 
 .banniere-img img{
@@ -25,14 +43,13 @@ body{
 }
 
 section{
-	margin: 9%;
 }
 
 .actu-livre .lien-modal-apercu-livre img{
 	max-height: 100px;
 }
 
-#section-actus-badges, #section-bibliotheque, .fil-actus, .bloc-actus-recentes,.badges-utilisateur, .actu-ligne , .bloc-badges, .badge-ligne, .bloc-bibliotheque{
+#section-actus-badges, #section-bibliotheque, .fil-actus, .bloc-actus-recentes,.badges-utilisateur, .bloc-badges, .badge-ligne, .bloc-bibliotheque{
 	display: flex;
 }
 
@@ -40,12 +57,20 @@ section{
 	flex-direction: column;
 }
 
-#section-actus-badges, #section-bibliotheque{
-	justify-content: space-around;
-	width: 80%;
+#section-actus-badges{
+	justify-content: space-around; 
+	grid-column: 2 / 12;
+	display: grid;
+	grid-template-columns: 60% 20% 20%;
 	
 
 }
+
+ #section-bibliotheque{
+ 		grid-column: 2 / 12;
+	display: grid;
+	grid-template-columns: 1fr;
+ }
 
 .bloc-bibliotheque{
 	justify-content: center;
@@ -58,25 +83,31 @@ section{
 }
 
 .fil-actus{
-max-width: 50%;
+	grid-column: 1 / 2;
 }
 
 .badges-utilisateur{
-	min-width: 15%;
-	max-width: 20%;
+	
+		grid-column: 3 / 4;
+
 }
 
 .actu-ligne{
 	align-items: center;
-	justify-content: space-between;
 	max-width: 100%;
+	display: grid;
+    grid-template-columns: 100px auto 100px;
+	margin-block: 5px;
+	justify-items: start;
 }
 
 .profil-img, .badge-img{
 	margin-right: 30px;
+	float: left;
 }
 .actu-livre{
 	margin-left: 30px;
+	float: right;
 }
 
 
@@ -84,6 +115,7 @@ max-width: 50%;
 	border-radius: 50%;
 	width: 80px;
 	height: 80px;
+	max-height: 100px;		
 }
 
 .actu-content{
@@ -95,14 +127,43 @@ max-width: 50%;
 }
 
 .livre-ligne{
-	max-width: 19%;
-	margin-inline: 2%;
+	
 }
 
 .biblio-content .description{
-	max-height: 150px;
+	max-height: 10em;
 	text-overflow: ellipsis;
 	overflow: hidden;
     white-space: nowrap;
 	line-height: 4px;
+	border: 1px solid red;
+	width: 100%;
+}
+
+.auteur a, .nom-livre a, .nom-utilisateur a{
+	margin-left: 1ch;
+	text-decoration: none;
+	color: #a5602a;
+	font-weight: 600;
+}
+.nom-livre a, .nom-utilisateur a{
+	margin-left: 0;
+
+}
+
+.bloc-bibliotheque{
+	display: grid;
+	grid-template-columns: calc(25% - 15px) calc(25% - 15px) calc(25% - 15px) calc(25% - 15px);
+	gap: 20px;
+	grid-column: 1 / 5;
+	margin-bottom: 20%;
+}
+
+.bloc-bibliotheque-titre, .bloc-actus-titre, .bloc-badges-titre{
+	margin-left: -5ch;
+}
+
+
+.lien-modal-apercu-livre{
+	display: flex;
 }
